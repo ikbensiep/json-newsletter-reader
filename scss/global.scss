@@ -1,0 +1,104 @@
+// First up: config
+@import 'config';
+
+// Next: pull in gorko for design tokens
+@import '../node_modules/gorko/gorko.scss';
+
+// Pull in modern reset
+@import 'reset';
+
+
+html {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+// Global CSS starts
+body {
+  font-family: 'Roboto Flex', sans-serif;
+  line-height: get-size('600');
+  overflow-x: hidden;
+  padding: 0;
+  @include apply-utility('weight', 'medium');
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-family: 'Abril Fatface', serif;
+}
+
+h1 {
+  font-size: get-size('800');
+}
+
+h2,
+h3 {
+  font-size: get-size('800');
+}
+
+a {
+  color: currentColor;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+blockquote {
+  font-size: get-size('600');
+  line-height: get-size('700');
+}
+
+:focus {
+  outline: 2px dotted;
+  outline-offset: 0.25rem;
+}
+
+[style*="--delay"] {
+  opacity: 0.1;
+  scale: 1.25;
+  rotate: 3deg;
+  translate: 0 20px;
+  filter: blur(1ex);
+  animation: fade .5s calc(var(--delay) * .075s) ease forwards 1;
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    scale: 1;
+    translate: 0 0;
+    rotate: 0deg;
+  }
+}
+
+// Comp
+@import 'composition/frontpage';
+
+// Utilities
+@import 'utilities/auto-grid';
+@import 'utilities/box-shadow';
+@import 'utilities/flow';
+@import 'utilities/scroll-bars';
+@import 'utilities/splitter';
+@import 'utilities/wrapper';
+@import 'utilities/visually-hidden';
+
+
+// Blocks
+@import 'blocks/site-head';
+@import 'blocks/article-cards';
+@import 'blocks/article-preview';
+@import 'blocks/article-dialog';
+@import 'blocks/icon-buttons';
+
+// Exceptions
+// (optional)

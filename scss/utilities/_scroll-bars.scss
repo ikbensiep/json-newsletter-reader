@@ -1,0 +1,25 @@
+/* style scrollbar on chrome */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+  background: transparent;
+  transition: all 5s linear;
+}
+
+
+::-webkit-scrollbar-thumb {
+  height: 6px;
+  background: get-color('grey');
+  -webkit-border-radius: 1rem;
+  transition: all 5s linear;
+  opacity: .5;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent; 
+}
+
+:hover::-webkit-scrollbar-thumb {
+  opacity: 1;
+  background: get-color('grey-shade');;
+}

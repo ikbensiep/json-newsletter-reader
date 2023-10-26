@@ -1,0 +1,36 @@
+body {
+  > main,
+  > aside {
+    width: 50%;
+    height: 100vh;
+    
+    @media (max-width: 48em) {
+      width: 100%;
+    }
+  }
+
+  > main {
+    min-width: 40ch;
+    
+    > section {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+      > article {
+        scroll-snap-align: center;
+      }
+    }
+  }
+
+  > aside {
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    header {
+      position: sticky;
+      top: 0;
+    }
+    
+  }
+}

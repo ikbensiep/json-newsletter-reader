@@ -1,0 +1,807 @@
+@charset "UTF-8";
+/**
+ * BASE SIZE
+ * All calculations are based on this. It’s recommended that
+ * you keep it at 1rem because that is the root font size. You
+ * can set it to whatever you like and whatever unit you like.
+ */
+/**
+ * SIZE SCALE
+ * This is a Major Third scale that powers all the utilities that
+ * it is relevant for (font-size, margin, padding). All items are
+ * calcuated off the base size, so change that and cascade across
+ * your whole project.
+ */
+/**
+ * COLORS
+ * Colors are shared between backgrounds and text by default. 
+ * You can also use them to power borders, fills or shadows, for example.
+ */
+/**
+ * CORE CONFIG
+ * This powers everything from utility class generation to breakpoints
+ * to enabling/disabling pre-built components/utilities.
+ */
+/* GORKO: auto-generated utility classes start */
+.bg-primary {
+  background: white;
+}
+
+.bg-secondary {
+  background: #059dd0;
+}
+
+.bg-secondary-shade {
+  background: #00506b;
+}
+
+.bg-tertiary {
+  background: #2c988c;
+}
+
+.bg-tertiary-glare {
+  background: #d6fff6;
+}
+
+.bg-quaternary {
+  background: #2374ab;
+}
+
+.bg-light {
+  background: #fafafa;
+}
+
+.bg-light-shade {
+  background: #eeeeee;
+}
+
+.bg-grey {
+  background: #ccc;
+}
+
+.bg-grey-shade {
+  background: #666;
+}
+
+.bg-grey-dark {
+  background: #293b42;
+}
+
+.bg-black-25 {
+  background: rgba(0, 0, 0, 0.2509803922);
+}
+
+.bg-black-50 {
+  background: rgba(0, 0, 0, 0.5019607843);
+}
+
+.bg-black {
+  background: #000;
+}
+
+.color-primary {
+  color: white;
+}
+
+.color-secondary {
+  color: #059dd0;
+}
+
+.color-secondary-shade {
+  color: #00506b;
+}
+
+.color-tertiary {
+  color: #2c988c;
+}
+
+.color-tertiary-glare {
+  color: #d6fff6;
+}
+
+.color-quaternary {
+  color: #2374ab;
+}
+
+.color-light {
+  color: #fafafa;
+}
+
+.color-light-shade {
+  color: #eeeeee;
+}
+
+.color-grey {
+  color: #ccc;
+}
+
+.color-grey-shade {
+  color: #666;
+}
+
+.color-grey-dark {
+  color: #293b42;
+}
+
+.color-black-25 {
+  color: rgba(0, 0, 0, 0.2509803922);
+}
+
+.color-black-50 {
+  color: rgba(0, 0, 0, 0.5019607843);
+}
+
+.color-black {
+  color: #000;
+}
+
+.font-base {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+}
+
+.font-mono {
+  font-family: "IBM Plex Mono", Courier New, Courier, monospace;
+}
+
+.gap-top-300 {
+  margin-top: 0.8rem;
+}
+
+.gap-top-400 {
+  margin-top: 1rem;
+}
+
+.gap-top-500 {
+  margin-top: 1.33rem;
+}
+
+.gap-top-600 {
+  margin-top: 1.77rem;
+}
+
+.gap-top-700 {
+  margin-top: 2.4rem;
+}
+
+.gap-top-800 {
+  margin-top: 3.2rem;
+}
+
+.pad-top-300 {
+  padding-top: 0.8rem;
+}
+
+.pad-top-400 {
+  padding-top: 1rem;
+}
+
+.pad-top-500 {
+  padding-top: 1.33rem;
+}
+
+.pad-top-600 {
+  padding-top: 1.77rem;
+}
+
+.pad-top-700 {
+  padding-top: 2.4rem;
+}
+
+.pad-top-800 {
+  padding-top: 3.2rem;
+}
+
+.pad-block-300 {
+  padding-block: 0.8rem;
+}
+
+.pad-block-400 {
+  padding-block: 1rem;
+}
+
+.pad-block-500 {
+  padding-block: 1.33rem;
+}
+
+.pad-block-600 {
+  padding-block: 1.77rem;
+}
+
+.pad-block-700 {
+  padding-block: 2.4rem;
+}
+
+.pad-block-800 {
+  padding-block: 3.2rem;
+}
+
+.pad-inline-300 {
+  padding-inline: 0.8rem;
+}
+
+.pad-inline-400 {
+  padding-inline: 1rem;
+}
+
+.pad-inline-500 {
+  padding-inline: 1.33rem;
+}
+
+.pad-inline-600 {
+  padding-inline: 1.77rem;
+}
+
+.pad-inline-700 {
+  padding-inline: 2.4rem;
+}
+
+.pad-inline-800 {
+  padding-inline: 3.2rem;
+}
+
+.text-300 {
+  font-size: 0.8rem;
+}
+
+.text-400 {
+  font-size: 1rem;
+}
+
+.text-500 {
+  font-size: 1.33rem;
+}
+
+.text-600 {
+  font-size: 1.77rem;
+}
+
+.text-700 {
+  font-size: 2.4rem;
+}
+
+.text-800 {
+  font-size: 3.2rem;
+}
+
+.weight-medium {
+  font-weight: 500;
+}
+
+.weight-bold {
+  font-weight: 700;
+}
+
+@media (min-width: 48em) {
+  .md\:text-300 {
+    font-size: 0.8rem;
+  }
+  .md\:text-400 {
+    font-size: 1rem;
+  }
+  .md\:text-500 {
+    font-size: 1.33rem;
+  }
+  .md\:text-600 {
+    font-size: 1.77rem;
+  }
+  .md\:text-700 {
+    font-size: 2.4rem;
+  }
+  .md\:text-800 {
+    font-size: 3.2rem;
+  }
+}
+/* GORKO: auto-generated utility classes end */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article section > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+  line-height: 1.77rem;
+  overflow-x: hidden;
+  padding: 0;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-family: "Abril Fatface", serif;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2,
+h3 {
+  font-size: 3.2rem;
+}
+
+a {
+  color: currentColor;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+blockquote {
+  font-size: 1.77rem;
+  line-height: 2.4rem;
+}
+
+:focus {
+  outline: 2px dotted;
+  outline-offset: 0.25rem;
+}
+
+[style*="--delay"] {
+  opacity: 0.1;
+  scale: 1.25;
+  rotate: 3deg;
+  translate: 0 20px;
+  filter: blur(1ex);
+  animation: fade 0.5s calc(var(--delay) * 0.075s) ease forwards 1;
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    scale: 1;
+    translate: 0 0;
+    rotate: 0deg;
+  }
+}
+body > main,
+body > aside {
+  width: 50%;
+  height: 100vh;
+}
+@media (max-width: 48em) {
+  body > main,
+  body > aside {
+    width: 100%;
+  }
+}
+body > main {
+  min-width: 40ch;
+}
+body > main > section {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+body > main > section > article {
+  scroll-snap-align: center;
+}
+body > aside {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+body > aside header {
+  position: sticky;
+  top: 0;
+}
+
+/*
+  AUTO GRID
+  Set the minimum item size with `--auto-grid-min-size` and you’ll
+  get a fully responsive grid with no media queries.
+
+  https://piccalil.lihttps://piccalil.li/tutorial/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/
+*/
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 16rem), 1fr));
+  grid-gap: var(--auto-grid-gap, 1.33rem);
+}
+
+.shadow-10 {
+  box-shadow: 0 0 10px black;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+/* style scrollbar on chrome */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+  background: transparent;
+  transition: all 5s linear;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 6px;
+  background: #ccc;
+  -webkit-border-radius: 1rem;
+  transition: all 5s linear;
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+:hover::-webkit-scrollbar-thumb {
+  opacity: 1;
+  background: #666;
+}
+
+.splitter > :last-child {
+  margin-top: 1.33rem;
+}
+@media (min-width: 48em) {
+  .splitter {
+    display: flex;
+  }
+  .splitter > * {
+    flex-grow: 1;
+  }
+  .splitter > :last-child {
+    margin-top: 0;
+    margin-left: 1.33rem;
+    min-width: 22rem;
+  }
+}
+
+.wrapper {
+  max-width: 81rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.77rem;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.site-head {
+  padding: 0.8rem 0;
+  z-index: 1;
+}
+.site-head h1, .site-head h2, .site-head h3 {
+  font-family: "Roboto Flex", sans-serif !important;
+  font-size: 1.77rem;
+  font-weight: 300;
+}
+.site-head h1 strong, .site-head h2 strong, .site-head h3 strong {
+  font-weight: 700;
+}
+.site-head__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-head h1 {
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+
+ul.article-cards {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  padding-inline: 1.33rem;
+}
+ul.article-cards li {
+  scroll-snap-align: start;
+  scroll-margin-block: 1rem;
+}
+ul.article-cards li a {
+  height: 344px;
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: inset 0 0 0 2px #000;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+ul.article-cards li a > * {
+  pointer-events: none;
+}
+ul.article-cards li a:focus, ul.article-cards li a:hover, ul.article-cards li a.active {
+  box-shadow: inset 0 0 0 2px #059dd0;
+  transition-duration: 0.75;
+}
+ul.article-cards li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 1.33rem;
+  left: 1.33rem;
+  right: 1.33rem;
+  border-bottom: 1px solid #666;
+}
+ul.article-cards li a:active {
+  scale: 0.98;
+}
+ul.article-cards li img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  background: #ccc;
+}
+ul.article-cards li strong {
+  color: #059dd0;
+}
+ul.article-cards li span {
+  display: block;
+  height: 5ch;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+article.preview {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+article.preview img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+article.preview video {
+  position: absolute;
+  z-index: 2;
+  inset-inline: 15%;
+  width: 70%;
+  bottom: 50vh;
+  background: black;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+article.preview div {
+  position: absolute;
+  z-index: 2;
+  inset-inline: 15%;
+  bottom: 10vh;
+}
+article.preview div > * {
+  display: block;
+  opacity: 0;
+  translate: 0 1rem;
+  transition: all 1.5s 0.25s;
+}
+article.preview:hover div > *, article.preview:focus div > *, article.preview:focus-within div > *, article.preview:target div > * {
+  translate: 0 0;
+  opacity: 1;
+}
+
+dialog#articleViewer {
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  margin: 0rem auto !important;
+  position: absolute;
+  inset: 0;
+  border: none;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw !important;
+  z-index: 3;
+  clip-path: circle(0% at center);
+  opacity: 0;
+  transition: clip-path 0.5s 0s ease, opacity 0.75s 0.25s;
+}
+dialog#articleViewer[open] {
+  pointer-events: initial;
+  opacity: 1;
+  clip-path: circle(100% at center);
+  transition-delay: 0s, 0s;
+}
+dialog#articleViewer[open] > * {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+dialog#articleViewer > * {
+  opacity: 0;
+  transition: opacity 0.25s 0.5s;
+}
+dialog#articleViewer header {
+  border-bottom: 1px solid #eeeeee;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+dialog#articleViewer header button[close] {
+  position: absolute;
+  top: 1.33rem;
+  right: 1rem;
+}
+dialog#articleViewer main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+dialog#articleViewer main > button {
+  position: fixed;
+  height: 100%;
+  border-color: #eeeeee;
+  border-right-width: 1px;
+  border-right-style: solid;
+  padding: 0;
+}
+dialog#articleViewer main > button svg {
+  width: 72px;
+  height: 72px;
+}
+dialog#articleViewer main > button:last-of-type {
+  right: 0;
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+dialog#articleViewer main article {
+  width: 100%;
+}
+dialog#articleViewer main article section {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 3.2rem;
+}
+dialog#articleViewer main article .hero {
+  padding: 0;
+  height: 32rem;
+  overflow: hidden;
+}
+dialog#articleViewer main article .hero img {
+  width: 100%;
+  object-position: center;
+  object-fit: fill;
+}
+dialog#articleViewer main article .intro {
+  min-height: 10rem;
+}
+dialog#articleViewer main article .intro div:first-child {
+  padding-inline-end: 3.2rem;
+}
+dialog#articleViewer main article .meta {
+  display: flex;
+  flex-grow: 0;
+  flex-flow: column;
+}
+dialog#articleViewer footer {
+  position: relative;
+  z-index: 2;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+button[prev] svg {
+  scale: -1 1;
+}
+button svg {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+button svg path {
+  stroke: #ccc !important;
+}
+button:not([disabled]) svg path {
+  stroke: #059dd0 !important;
+}
+button:not([disabled]):hover svg, button:not([disabled]):focus svg {
+  background: #059dd0;
+}
+button:not([disabled]):hover svg path, button:not([disabled]):focus svg path {
+  stroke: white !important;
+}
+
+/*# sourceMappingURL=global.css.map */

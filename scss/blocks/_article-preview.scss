@@ -1,0 +1,46 @@
+article.preview {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+  }
+
+  video {
+    position: absolute;
+    z-index: 2;
+    inset-inline: 15%;
+    width: 70%;
+    bottom: 50vh;
+    background: black;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  div {
+    position: absolute;
+    z-index: 2;
+    inset-inline: 15%;
+    bottom: 10vh;
+    > * {
+      display: block;
+      opacity: 0.0;
+      translate: 0 1rem;
+      transition: all 1.5s .25s;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within,
+  &:target {
+    div > * {
+      translate: 0 0;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+ul.article-cards {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  padding-inline: get-size('500');
+
+  li {
+    scroll-snap-align: start;
+    scroll-margin-block: 1rem;
+    a {
+      height: 344px;
+      position: relative;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      padding: 1rem;
+      box-shadow: inset 0 0 0 2px get-color('black');
+      text-decoration: none;
+      transition: all .25s ease;
+      
+      > * {
+        pointer-events: none;
+      }
+
+      &:focus,
+      &:hover,
+      &.active {
+        box-shadow: inset 0 0 0 2px get-color('secondary');
+        transition-duration: .75;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: get-size('500');
+        left: get-size('500');
+        right: get-size('500');
+        border-bottom: 1px solid get-color('grey-shade');
+      }
+      &:active {
+        scale: .98;
+      }
+    }
+    
+    img {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+      background: get-color('grey');
+    }
+
+    strong {
+      color: get-color(secondary)
+    }
+
+    span {
+      display: block;
+      height: 5ch;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

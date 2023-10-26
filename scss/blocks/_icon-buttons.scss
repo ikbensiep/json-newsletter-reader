@@ -1,0 +1,37 @@
+button {
+  background-color: transparent;
+  border: none;
+
+  &[prev] {
+    svg { scale: -1 1;}
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+  }
+  
+  svg path {
+    stroke: get-color('grey') !important;
+  }
+  
+
+  &:not([disabled]) {
+    svg path {
+      stroke: get-color('secondary')!important;
+    }
+
+    &:hover,
+    &:focus {
+
+      svg { 
+        background: get-color('secondary');
+        path {
+          stroke: white !important;
+        }
+      }
+    }
+
+  }
+}

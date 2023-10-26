@@ -1,0 +1,25 @@
+.site-head {
+  padding: 0.8rem 0;
+  z-index: 1;
+  h1, h2, h3 {
+    font-family: 'Roboto Flex', sans-serif !important;
+    font-size: get-size('600');
+    font-weight: 300;
+    
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // Right margin prevents any collisions with the title
+  h1 {
+    margin: 0.5rem 1rem 0.5rem 0;
+  }
+}
