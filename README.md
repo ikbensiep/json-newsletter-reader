@@ -12,3 +12,8 @@ npm i
 ```bash
 npm run dev
 ```
+
+
+
+https://github.com/ikbensiep/json-newsletter-reader/assets/5741190/78b09695-239f-41df-9f5e-89b964b64d0b
+
