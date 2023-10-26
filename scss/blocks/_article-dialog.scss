@@ -40,11 +40,6 @@ dialog#articleViewer {
     width: 100%;
     background-color: white;
 
-    button[close] {
-      position: absolute;
-      top: get-size('500');
-      right: get-size('400');
-    }
   }
   
   main {
@@ -57,22 +52,28 @@ dialog#articleViewer {
     > button {
       position: fixed;
       height: 100%;
+      padding: 0;
       border-color: get-color('light-shade');
       border-right-width: 1px;
       border-right-style: solid;
+      width: get-size('800');
 
-      padding: 0;
-
-      svg {
-        width: 72px;
-        height: 72px;
-      }
 
       &:last-of-type {
         right: 0;
         border-left-width: 1px;
         border-left-style: solid;
       }
+      @media(max-width: 1440px) {
+        border: none !important;
+      }
+
+      > svg {
+        aspect-ratio: 1;
+        width: 100%;
+        height: auto;
+      }
+
     }
 
     article {
@@ -80,7 +81,6 @@ dialog#articleViewer {
       
       section {
         max-width: 1280px;
-        // max-width: 80vw;
         margin-inline: auto;
         padding: get-size('800');
       }
@@ -92,9 +92,9 @@ dialog#articleViewer {
         
         img {
           width: 100%;
-          
+          height: 100%;
           object-position: center;
-          object-fit: fill;
+          object-fit: cover;
         }
       }
       .intro {

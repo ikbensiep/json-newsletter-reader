@@ -717,11 +717,6 @@ dialog#articleViewer header {
   width: 100%;
   background-color: white;
 }
-dialog#articleViewer header button[close] {
-  position: absolute;
-  top: 1.33rem;
-  right: 1rem;
-}
 dialog#articleViewer main {
   display: flex;
   flex-direction: row;
@@ -731,19 +726,26 @@ dialog#articleViewer main {
 dialog#articleViewer main > button {
   position: fixed;
   height: 100%;
+  padding: 0;
   border-color: #eeeeee;
   border-right-width: 1px;
   border-right-style: solid;
-  padding: 0;
-}
-dialog#articleViewer main > button svg {
-  width: 72px;
-  height: 72px;
+  width: 3.2rem;
 }
 dialog#articleViewer main > button:last-of-type {
   right: 0;
   border-left-width: 1px;
   border-left-style: solid;
+}
+@media (max-width: 1440px) {
+  dialog#articleViewer main > button {
+    border: none !important;
+  }
+}
+dialog#articleViewer main > button > svg {
+  aspect-ratio: 1;
+  width: 100%;
+  height: auto;
 }
 dialog#articleViewer main article {
   width: 100%;
@@ -760,8 +762,9 @@ dialog#articleViewer main article .hero {
 }
 dialog#articleViewer main article .hero img {
   width: 100%;
+  height: 100%;
   object-position: center;
-  object-fit: fill;
+  object-fit: cover;
 }
 dialog#articleViewer main article .intro {
   min-height: 10rem;
