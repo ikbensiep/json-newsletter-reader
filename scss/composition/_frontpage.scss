@@ -11,7 +11,8 @@ body {
 
   > main {
     min-width: 40ch;
-    
+    position: relative;
+    z-index: 2;
     > section {
       height: 100vh;
       overflow-y: scroll;

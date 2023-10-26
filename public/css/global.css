@@ -461,6 +461,8 @@ body > aside {
 }
 body > main {
   min-width: 40ch;
+  position: relative;
+  z-index: 2;
 }
 body > main > section {
   height: 100vh;
@@ -617,9 +619,9 @@ ul.article-cards li a::after {
   content: "";
   display: block;
   position: absolute;
-  bottom: 1.33rem;
-  left: 1.33rem;
-  right: 1.33rem;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
   border-bottom: 1px solid #666;
 }
 ul.article-cards li a:active {

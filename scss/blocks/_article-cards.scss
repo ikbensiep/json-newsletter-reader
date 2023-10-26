@@ -33,9 +33,9 @@ ul.article-cards {
         content: '';
         display: block;
         position: absolute;
-        bottom: get-size('500');
-        left: get-size('500');
-        right: get-size('500');
+        bottom: get-size('400');
+        left: get-size('400');
+        right: get-size('400');
         border-bottom: 1px solid get-color('grey-shade');
       }
       &:active {
