@@ -10,7 +10,6 @@ let newsletter;
 let articleIndex = 0;
 
 async function loadNewsletter() {
-  
   const response = await fetch('./data/edition-1.json');
   newsletter = await response.json();
 
@@ -18,9 +17,13 @@ async function loadNewsletter() {
     articleBrowseList.appendChild(renderArticleBrowseListItem(element, index));
     fpArticleList.appendChild(renderArticlePreview(index));
   });
+  
+  // select first thumbnail item 
+  // (a *little* redundant tbh, but it'll highlight the item in the thumbnail grid)
   articleBrowseList.querySelector('a').click();
 }
 
+// renders scrollable article thumbnail grid on the right
 function renderArticleBrowseListItem(element, index) {
   const template = browseArticleTemplate.content.cloneNode(true);
   const li = template.querySelector('li');
@@ -43,8 +46,8 @@ function renderArticleBrowseListItem(element, index) {
   return li;
 }
 
+// renders large scrollable list of article previews on the left hand side of the page
 function renderArticlePreview (index) {
-
   const template = fpArticleTemplate.content.cloneNode(true);
   const article = template.querySelector('article');
   const img = template.querySelector('img');
@@ -69,9 +72,9 @@ function renderArticlePreview (index) {
   }
 
   return template;
-
 }
 
+// renders article in dialog element
 function renderArticleFull () {
   //article navigation housekeeping
   if(articleIndex <= 0) {
@@ -93,31 +96,38 @@ function renderArticleFull () {
   articleDialog.querySelector('article h1').textContent = currentArticle.title;
   articleDialog.querySelector('article blockquote').innerHTML = currentArticle.intro;
   articleDialog.querySelector('article .body').innerHTML = currentArticle.content;
-  
-
 }
 
+// highlights thumbnail grid item
 function selectArticle (e) {
   articleBrowseList.querySelectorAll('a').forEach(link => link.className = '');
   e.target.className = 'active';
 }
 
+// selects article fro URL, has it rendered and opens the dialog it's rendered into
 function openArticleFull () {
-  
+  // links from the item preview will generate an article url like `#article/1`
   let location = new URL(document.location);
   let articleURL = location.hash.split('/')
+
+  // setting a global to the selected article index
   articleIndex = articleURL[articleURL.length - 1];
 
+  // put stuff in place
   renderArticleFull();
 
+  // reveal content
   articleDialog.showModal();
 }
 
+// y'know
 function closeDialog() {
-  console.log('close dialog')
+  // this is less elegant than I'd hoped for
   history.pushState({}, '', '#');
 }
 
+// finds URL hash and depending on it's state, scrolls towards anchor
+// or opens full article dialog
 function doNavigation () {
   let url = new URL(document.location);
   let articleHash = url.hash;
@@ -133,28 +143,34 @@ function doNavigation () {
       // open article detail
       let articleDetailLink = document.querySelector(`[href="${articleHash}"]`);
       
+      // clicks the link, adding the hash to the page url (which doesn't match with a page anchor, so..)
       articleDetailLink.click();
+      // open article in dialog
       openArticleFull();
     }
   }
 }
 
+// the business
 window.addEventListener('load', async () => {
   await loadNewsletter();
   doNavigation();
 });
 
+// the hustle
 window.addEventListener('hashchange', (e) => {
-  console.log('navigeer')
   doNavigation();
 });
 
+// the muscle
 articleDialog.addEventListener('close', closeDialog);
 
 prevItemButton.addEventListener('click', () => {
   if(articleIndex > 0){
     articleIndex--;
   }
+  // not sure what's up with these guys,
+  // seems convoluted or something
   // history.pushState({},'',`#article/${articleIndex}`);
   window.location = `#article/${articleIndex}`;
 });
@@ -166,4 +182,4 @@ nextItemButton.addEventListener('click', () => {
 
   // history.pushState({name: 'test'},'',`#article/${articleIndex}`);
   window.location = `#article/${articleIndex}`;
-})
+});
