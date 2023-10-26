@@ -5,6 +5,10 @@ Fires up a tiny express server that'll serve out static files.
 
 Comes with (wonky) livereload support.
 
-`npm i`
+```bash
+npm i
+```
 
-`npm run dev`
+```bash
+npm run dev
+```
