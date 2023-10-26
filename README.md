@@ -5,6 +5,8 @@ Fires up a tiny express server that'll serve out static files.
 
 Comes with (wonky) livereload support (needs livereload browser addon to work). 🤔
 
+Layout powered by the CUBE css and the awesome `gorko` package, by @Andy-set-studio
+
 ```bash
 npm i
 ```
