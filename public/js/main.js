@@ -118,6 +118,7 @@ function openArticleFull () {
 
   // reveal content
   articleDialog.showModal();
+  articleDialog.scrollTo({top:0, left: 0, behavior: 'smooth'});
 }
 
 // y'know
